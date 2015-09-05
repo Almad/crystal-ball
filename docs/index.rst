@@ -1,12 +1,32 @@
-.. Crystal Ball documentation master file, created by
-   sphinx-quickstart on Sat Sep  5 17:56:25 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Welcome to Crystal Ball's documentation!
 ========================================
 
-Contents:
+Scaling organisation and want to know how your colleagues are organised and who's responsible for which organisation and service?
+
+We have crystall ball for that.
+
+
+Basic terms
+------------
+
+.. glossary::
+
+	Member
+		Person present in the system, that belongs to a :term:`team`.
+
+	team
+	Team
+		Named collection of :term:`Members`.
+
+	Repository
+		Git(hub) repository that contains versioned bunch of source files.
+
+		Managed by :term:`Team`.
+
+	Service
+		Repository deployed to network, with exposed network interface.
+
 
 .. toctree::
    :maxdepth: 2
