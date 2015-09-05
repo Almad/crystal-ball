@@ -10,6 +10,10 @@
 
 `docker-compose run web python manage.py syncdb`
 
+After altering dependency chain (like adding a line to `requirements.txt`), run 
+
+`docker-compose build web`
+
 
 ## Running
 
