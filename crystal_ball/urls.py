@@ -17,9 +17,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+import crystal_ball.ball.urls
 from crystal_ball import ball
+
+print(dir(ball))
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^ball/', include(ball)),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'', include(ball.urls)),
 ]
