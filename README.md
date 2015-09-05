@@ -8,6 +8,10 @@
 
 ## Installation
 
+`cp crystal_ball/settings/local-dist.py crystal_ball/settings/local.py`
+
+Look into local settings.
+
 `docker-compose run web python manage.py syncdb`
 
 After altering dependency chain (like adding a line to `requirements.txt`), run 

@@ -55,3 +55,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Local settings
+/crystal_ball/settings/local.py
