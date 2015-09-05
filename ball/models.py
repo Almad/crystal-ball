@@ -12,3 +12,9 @@ class GithubTeam(models.Model):
 
 class Member(models.Model):
     date_joined = models.DateField('Date the Member joined the Company')
+
+class Service(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+    github_repository = models.CharField(max_length=255)
