@@ -1,6 +1,6 @@
 .. developing-crystal-ball
 
-Developing Crystall Ball
+Developing Crystal Ball
 =========================
 
 .. note::
