@@ -58,3 +58,8 @@ target/
 
 # Local settings
 /crystal_ball/settings/local.py
+
+# Local dev database
+/db/development.sqlite3
+
+
