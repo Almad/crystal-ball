@@ -1,4 +1,4 @@
-# Crystall Ball
+# Crystall Ball ![build status](https://circleci.com/gh/Almad/crystal-ball.svg?style=shield&circle-token=29702d6a0400c8207e970c20b5fb78510a039e74)
 
 > Do you know where this is?
 
