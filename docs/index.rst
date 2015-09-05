@@ -1,6 +1,7 @@
+.. _introduction:
 
-Welcome to Crystal Ball's documentation!
-========================================
+Crystall Ball: Source of truth for company organisation
+========================================================
 
 Scaling organisation and want to know how your colleagues are organised and who's responsible for which organisation and service?
 
@@ -30,6 +31,8 @@ Basic terms
 
 .. toctree::
    :maxdepth: 2
+
+   developing-crystal-ball
 
 
 
