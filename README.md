@@ -44,7 +44,7 @@ If you want to test with different IP addresses at runtime, add line like
 
 `IP_OVERRIDE=8.8.8.8`
 
-to file called `.env` that is in the root of the repository.
+to file called `.env` that is in the root of the repository, and add `env_file: .env` to your `docker-compose.yml` (if you have better way how to propagate environment variables downstream, please let me know).
 
 ## Attribution
 
