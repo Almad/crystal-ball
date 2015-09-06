@@ -39,3 +39,8 @@ See browser at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 ## Testing
 
 `docker-compose run --rm --user "$(id -u):$(id -g)" web python3 manage.py test`
+
+## Attribution
+
+This product includes GeoLite data created by MaxMind, available from 
+[MaxMind](http://www.maxmind.com).

@@ -40,9 +40,13 @@ body {
   <div class="jumbotron">
     <div class="container">
       <h1>Check In</h1>
-      <p>Your current location is {{ profile.current_location }}</p>
-      <p>Your current timezone is {{ profile.current_timezone }} (therefore, your current local time is {{ current_time }})</p>
+      <h2>Current Data</h2>
+      <p>Your saved location is {{ profile.current_location }}</p>
+      <p>Your saved timezone is {{ profile.current_timezone }} (therefore, your current local time should be {{ saved_current_time }})</p>
       <!-- <p><a class="btn btn-primary btn-lg" role="button">Go to dashboard »</a></p> -->
+      <h2>Check In</h2>
+      <p>Your current location is detected as {{ current_location }}</p>
+      <p>Your detected timezone is {{ current_timezone }} (therefore, your current local time should be {{ current_time }})</p>
     </div>
   </div>
 

@@ -3,10 +3,13 @@
 
 # Generyc python stuff
 pytz
+# geoip - installed via apt-get in Docker
+tzwhere
 
 # Django stuff
 Django>=1.8,<1.9
 django-timezone-field
+django-ipware
 
 # Templates
 django_compressor

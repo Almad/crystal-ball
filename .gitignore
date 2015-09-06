@@ -62,4 +62,5 @@ target/
 # Local dev database
 /db/development.sqlite3
 
-
+# Local environment for Docker
+.env

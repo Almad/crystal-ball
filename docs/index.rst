@@ -35,6 +35,8 @@ Basic terms
    developing-crystal-ball
 
 
+This product includes GeoLite data created by MaxMind, available from 
+[MaxMind](http://www.maxmind.com).
 
 Indices and tables
 ==================

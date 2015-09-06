@@ -283,6 +283,8 @@ SECRET_KEY = get_env_setting('SECRET_KEY')
 
 INTERNAL_IPS = ('127.0.0.1')
 
+GEOIP_PATH = os.path.join(PROJECT_ROOT, 'media', 'GeoLiteCity.dat')
+
 # Enable this option for memcached
 #CACHE_BACKEND= "memcached://127.0.0.1:11211/"
 

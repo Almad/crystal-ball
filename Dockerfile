@@ -5,7 +5,9 @@ ENV PYTHONUNBUFFERED 1
 # might be worth removing
 RUN apt-get update && apt-get install -y \
 	build-essential \
+	python-geoip \
 	python3-dev \
+	python-numpy \
 	libffi-dev
 
 RUN mkdir /code
