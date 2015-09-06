@@ -13,11 +13,11 @@ INSTALLED_APPS = base.INSTALLED_APPS + ('django_nose',)
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db/development.sqlite3',
-        'USER': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'PASSWORD': '',
-        'HOST': '',
+        'HOST': 'db',
         'PORT': '',
         #'OPTIONS': {
         #    'init_command': 'SET storage_engine=InnoDB',
