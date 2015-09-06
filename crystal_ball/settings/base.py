@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'djcelery',
     'debug_toolbar',
     'compressor',
+    'timezone_field',
 
     # 3rd party authentication
 
@@ -63,6 +64,7 @@ INSTALLED_APPS = (
 
     # Local apps, referenced via appname
     'ball',
+    'checkin',
 )
 
 # Place bcrypt first in the list, so it will be the default password hashing
@@ -321,10 +323,12 @@ AUTHENTICATION_BACKENDS = (
 )
 
 LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = False
+SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': ['email'],
     }
 }
-

@@ -1,5 +1,14 @@
 from django.db import models
 from django.contrib.sites.models import Site
+from django.contrib.auth.models import User
+
+from timezone_field import TimeZoneField
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    current_location = models.CharField(max_length=100, default='Prague')
+    current_timezone = TimeZoneField(default='Europe/Prague')
+
 
 class Company(models.Model):
     name = models.CharField(max_length=255)

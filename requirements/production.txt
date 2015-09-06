@@ -1,8 +1,12 @@
 # Install everything that needs to be compiled
 -r compiled.txt
 
+# Generyc python stuff
+pytz
+
 # Django stuff
 Django>=1.8,<1.9
+django-timezone-field
 
 # Templates
 django_compressor
