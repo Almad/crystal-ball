@@ -40,6 +40,12 @@ See browser at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 `docker-compose run --rm --user "$(id -u):$(id -g)" web python3 manage.py test`
 
+If you want to test with different IP addresses at runtime, add line like
+
+`IP_OVERRIDE=8.8.8.8`
+
+to file called `.env` that is in the root of the repository.
+
 ## Attribution
 
 This product includes GeoLite data created by MaxMind, available from 
