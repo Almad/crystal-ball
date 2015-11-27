@@ -46,7 +46,7 @@ After altering dependency chain (like adding a line to `requirements.txt`), run
 After modifying `models.py`:
 
 `docker-compose run --rm --user "$(id -u):$(id -g)" web python manage.py makemigrations`
-`docker-compose run --rm --user "$(id -u):$(id -g)"web python manage.py migrate`
+`docker-compose run --rm --user "$(id -u):$(id -g)" web python manage.py migrate`
 
 ## Testing
 
