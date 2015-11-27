@@ -11,16 +11,25 @@ class UserProfile(models.Model):
 
 
 class Company(models.Model):
+    """ Name of the top-level company """
     name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
 
 class Team(models.Model):
+    """ Team within the company. May be recursive. """
     name = models.CharField(max_length=255)
+    company = models.ForeignKey(Company, null=True)
+    parent_team = models.ForeignKey("self", blank=True, null=True)
 
     def __str__(self):
         return self.name
+
+class GithubOrganisation(models.Model):
+    name = models.CharField(max_length=255)
+    company = models.ForeignKey(Company)
+
 
 class GithubTeam(models.Model):
     name = models.CharField(max_length=255)

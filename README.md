@@ -28,13 +28,24 @@ See browser at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 **to be automated...**
 
-1. Head to [Google Developer Console](https://console.developers.google.com), create a new project for your installation or development, go to "APIs & auth" -> "Credentials" -> Add Credentials on that project, select "OAuth 2.0 Client ID", "Web Application" and use `http://127.0.0.1:8000/accounts/google/login/callback/` for "Authorized redirect URIs".
+1. Head to [Google Developer Console](https://console.developers.google.com), create a new project for your installation or development, go to "API Manager" -> "Credentials" -> Add Credentials on that project, select "OAuth 2.0 Client ID", "Web Application" and use `http://127.0.0.1:8000/accounts/google/login/callback/` for "Authorized redirect URIs".
 
 1. Go to [your django admin](http://127.0.0.1:8000/admin/) and login with credentials you've entered during `syncdb` step
 
 	1. Go to "Sites", click on existing "example.com" site and change the domain name to `127.0.0.1:8000` (or wherever you are running)
 
 	1. Go to "Social applications" and add a new application with Google as a provider, credentials you've received from Google Developer Console and connected with the site from previous step
+
+## Development
+
+After altering dependency chain (like adding a line to `requirements.txt`), run 
+
+`docker-compose build web`
+
+
+After modifying `models.py`:
+
+`docker-compose run web python manage.py makemigrations`
 
 ## Testing
 
