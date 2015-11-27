@@ -46,6 +46,7 @@ After altering dependency chain (like adding a line to `requirements.txt`), run
 After modifying `models.py`:
 
 `docker-compose run web python manage.py makemigrations`
+`docker-compose run web python manage.py migrate`
 
 ## Testing
 
