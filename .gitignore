@@ -64,3 +64,4 @@ target/
 
 # Local environment for Docker
 .env
+/.postgres_db

@@ -1,5 +1,7 @@
 db:
   image: postgres
+  volumes:
+    - ./.postgres_db/:/var/lib/postgresql/data
 web:
   build: .
   environment:

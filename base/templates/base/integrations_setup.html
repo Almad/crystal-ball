@@ -1,0 +1,81 @@
+{% extends "_layouts/base.html" %}
+{% load socialaccount %}
+
+{% block css %}
+{{block.super}}
+<style>
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+</style>
+{% endblock css %}
+
+{% block page_title %}Integrations{% endblock %}
+{% block page_class %}integrations{% endblock %}
+
+
+{% block content %}
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Crystal Ball</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        {% if not user.is_authenticated %}
+          <form class="navbar-form navbar-right" action="{% provider_login_url "google" %}">
+            <!-- <input class="hidden" name="next" value="/"> -->
+            <button type="submit" class="btn btn-success">Sign in using Google</button>
+          </form>
+        {% else %}
+          <form class="navbar-form navbar-right">
+            <!-- <input class="hidden" name="next" value="/"> -->
+            <button type="submit" class="btn btn-success">Log out, {{ user }}</button>
+          </form>
+        {% endif %}
+      </div><!--/.navbar-collapse -->
+    </div>
+  </div>
+
+  {% if not user.is_authenticated %}
+    <form class="navbar-form navbar-right" action="{% provider_login_url "google" %}">
+      <!-- <input class="hidden" name="next" value="/"> -->
+      <button type="submit" class="btn btn-success">Log in using Google first</button>
+    </form>
+  {% else %}
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Integrations setup</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Github</h2>
+          {% if github_account %}
+            <p>Connected with GitHub account {{ github_account.user }}
+          {% else %}
+            <p>Not set up yet</p>
+            <p>
+              <form class="navbar-form navbar-right" action="{% provider_login_url "github" %}">
+                <!-- <input class="hidden" name="next" value="/"> -->
+                <button type="submit" class="btn btn-success">Log in using Github »</button>
+              </form>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+{% endblock %}

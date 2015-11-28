@@ -65,6 +65,7 @@ INSTALLED_APPS = (
     # Local apps, referenced via appname
     'ball',
     'checkin',
+    'octoball',
 )
 
 # Place bcrypt first in the list, so it will be the default password hashing
@@ -332,5 +333,16 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': ['email'],
+    },
+    'github': {
+        'SCOPE': [
+            'user',
+            'public_repo',
+            'repo',
+            'notifications',
+            'admin:repo_hook',
+            'admin:org_hook',
+            'read:org',
+        ],
     }
 }
