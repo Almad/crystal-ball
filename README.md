@@ -6,6 +6,14 @@
 
 -- Unknown Developers
 
+## Big Fat Warning
+
+This is not production ready #totes
+
+Especially beware of:
+
+* `django-allauth` is storing access tokens unecrypted. Given `crystal-ball` needs _very_ high privileges for its magic, **this puts all your GitHub data at risk!**
+
 ## Installation
 
 `cp crystal_ball/settings/local-dist.py crystal_ball/settings/local.py`
